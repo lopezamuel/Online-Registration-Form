@@ -1,0 +1,258 @@
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    color: gray;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: 'Merriweather', serif;
+}
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1000px;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h1 {
+    color: #fff;
+}
+h2 {
+    margin-top: 120px;
+    color: #023245;
+}
+
+/* ---- Base Layout Styles ---- */
+
+header {
+    position: fixed;
+    z-index: 100;
+    padding: 1em 0;
+    width: 100%;
+    background: #023245;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    text-transform: uppercase;
+}
+.header-form {
+    margin-bottom: 2px;
+    padding: 2rem 0;
+    border-bottom: 5px solid #023245;
+    text-align: center;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+button {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    padding: 0 30px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background: #29ccc4;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 38px;
+    cursor: pointer;
+}
+button:hover {
+    background: #2fe0d7;
+    text-decoration: none;
+}
+button:hover,
+button:focus {
+    outline: 0;
+    border-color: #009892;
+    background: #009892;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+form {
+    padding: 3rem 0;
+    border-top: 3px solid #023245;
+}
+fieldset {
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+    border: none;
+}
+fieldset.contact {
+    border-bottom: 3px solid #023245;
+}
+legend {
+    color: #023245;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    padding: 6px 10px;
+    height: 38px;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    background-color: #e5e5e5;
+    box-shadow: none;
+}
+textarea {
+    height: 150px;
+}
+input[required] {
+    text-align: right;
+}
+input[required],
+select[id="state"] {
+    font-style: italic;
+    font-size: 1.3rem;
+}
+input:focus,
+textarea:focus,
+select {
+    outline-color: #023245;
+    text-align: left;
+}
+.newsletter label {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+.newsletter p {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+.checkboxes,
+.radio-buttons {
+    margin-bottom: 2em;
+}
+.input-col {
+    width: 100%;
+}
+
+/* Checkboxes and Radio Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.checkbox-custom,
+.radio-custom {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox-custom,
+.checkbox-custom-label,
+.radio-custom,
+.radio-custom-label {
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.checkbox-custom-label,
+.radio-custom-label {
+    position: relative;
+}
+.checkbox-custom + .checkbox-custom-label:before,
+.radio-custom + .radio-custom-label:before {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 2px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ddd;
+    border-radius: 20%;
+    background: #fff;
+    content: '';
+    vertical-align: middle;
+    text-align: center;
+}
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    border-color: #023245;
+    background: #023245;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+.radio-custom:checked + .radio-custom-label:before {
+    border-color: #023245;
+    background: #023245;
+    box-shadow: inset 0px 0px 0px 3px #fff;
+}
+.checkbox-custom:focus + .checkbox-custom-label,
+.radio-custom:focus + .radio-custom-label {
+    outline: 1px solid #ddd;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.full-width {
+    box-sizing: border-box;
+    width: 100%;
+}
+.float-right {
+    float: right;
+}
+.float-left {
+    float: left;
+}
+
+/* Clearfix
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container:after,
+.clearfix {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Larger than tablet */
+
+@media (min-width: 760px) {
+    .container {
+        width: 70%
+    }
+    .label-col {
+        padding: .5em;
+        width: 30%;
+    }
+    .input-col {
+        padding: 0 .5em;
+        width: 70%;
+    }
+}
+
+/* Larger than desktop */
+
+@media (min-width: 1025px) {
+    .container {
+        width: 50%;
+    }
+}
